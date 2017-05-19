@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.cell.PropertyValueFactory?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane prefHeight="660.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/8.0.102" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.MainPaneController">
+   <children>
+      <TableView fx:id="salesforceTable" layoutX="14.0" layoutY="53.0" prefHeight="600.0" prefWidth="485.0">
+        <columns>
+          <TableColumn prefWidth="150.0" text="担当者名">
+            <cellValueFactory><PropertyValueFactory property="name" /></cellValueFactory>
+          </TableColumn>
+          <TableColumn prefWidth="150.0" text="メールアドレス">
+            <cellValueFactory><PropertyValueFactory property="email" /></cellValueFactory>
+          </TableColumn>
+          <TableColumn prefWidth="150.0" resizable="false" sortable="false" text="会社名">
+          	<cellValueFactory><PropertyValueFactory property="accountName" /></cellValueFactory>
+          </TableColumn>
+          <TableColumn prefWidth="150.0" text="部署名">
+            <cellValueFactory><PropertyValueFactory property="department" /></cellValueFactory>
+          </TableColumn>
+          <TableColumn prefWidth="150.0" text="住所">
+            <cellValueFactory><PropertyValueFactory property="accountAddress" /></cellValueFactory>
+          </TableColumn>
+        </columns>
+      </TableView>
+      <Button layoutX="542.0" layoutY="263.0" mnemonicParsing="false" onMouseClicked="#importOnClick" prefHeight="35.0" prefWidth="116.0" text="インポート" />
+      <TableView fx:id="kintoneTable" layoutX="696.0" layoutY="53.0" prefHeight="600.0" prefWidth="485.0">
+        <columns>
+          <TableColumn editable="false" prefWidth="75.0" sortable="false" text="レコード番号">
+            <cellValueFactory><PropertyValueFactory property="レコード番号" /></cellValueFactory>
+          </TableColumn>
+          <TableColumn editable="false" prefWidth="150.0" sortable="false" text="担当者名">
+            <cellValueFactory><PropertyValueFactory property="担当者名" /></cellValueFactory>
+          </TableColumn>
+          <TableColumn editable="false" prefWidth="150.0" sortable="false" text="メールアドレス">
+            <cellValueFactory><PropertyValueFactory property="メールアドレス" /></cellValueFactory>
+          </TableColumn>
+          <TableColumn editable="false" prefWidth="150.0" sortable="false" text="会社名">
+            <cellValueFactory><PropertyValueFactory property="会社名" /></cellValueFactory>
+          </TableColumn>
+          <TableColumn editable="false" prefWidth="100.0" sortable="false" text="部署名">
+            <cellValueFactory><PropertyValueFactory property="部署名" /></cellValueFactory>
+          </TableColumn>
+          <TableColumn editable="false" prefWidth="150.0" sortable="false" text="住所">
+            <cellValueFactory><PropertyValueFactory property="住所" /></cellValueFactory>
+          </TableColumn>
+        </columns>
+      </TableView>
+   </children>
+</AnchorPane>
